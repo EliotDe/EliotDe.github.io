@@ -18,16 +18,30 @@ Ultimately, I am eager to apply myself, and the skills and principles I have lea
 ---
 
 ### CrisisSense: A Baremetal Environmental Sensor (ongoing)
-**Short Description:** Exploring embedded systems by designing and building a prototype for a low-power IoT sensor.
+**Short Description:** Exploring embedded systems by designing and building a prototype for a low-power IoT sensor. This project aims to use a low-power stm32, a bme280 sensor and a LoRa module to periodically transmit environmental data. Eventually I would like to expand to LoRaWAN.
 
 **Focus:** Internal Communication Protocols, Embedded-C, LoRa.
-
 [View on GitHub](https://github.com/EliotDe/CrisisSense)
 
 ---
 
-### Other Projects & Interests:
-**Short Description:** A collection of other academic projects, and explorations into areas of computer science I find interesting.
+## Other Projects & Explorations:
+
+### SAT Solver
+**Short Description:** As part of a coursework I implemented the DPLL SAT solver algorithm with the Tseitin transformation (to ensure CNF). This was an introduction to complexity theory.
+
+**Focus:** Complexity / Computability / Algorithms
+
+[View on GitHub](https://github.com/EliotDe/sat-solver)
+
+---
+
+### MRI Brain Tumour Detection
+**Short Description:** Used transfer learning to detect brain tumours in MRI scans. Used three models: VGG16, EfficientNetB0, and a custom classifier.
+
+**Focus:** Transfer Learning / CNNs
+
+[View on GitHub](https://github.com/EliotDe/BrainTumourAI)
 
 ---
 

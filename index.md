@@ -8,7 +8,7 @@ Ultimately, I am eager to apply myself, and the skills and principles I have lea
 
 ---
 
-## Projects
+## Current Projects
 
 ### Privacy-Preserving FL-based IoT NIDS (ongoing)
 **Short Description:** This is my final year dissertation. The aim is to build a model and privacy-preserving framework that addresses the performance tradeoff in secure FL systems -- with a particular application to intrusion detection in IoT networks.
@@ -25,22 +25,14 @@ Ultimately, I am eager to apply myself, and the skills and principles I have lea
 
 ---
 
-## Other Projects & Explorations:
+## Misc:
 
 ### SAT Solver
-**Short Description:** As part of a coursework I implemented the DPLL SAT solver algorithm with the Tseitin transformation (to ensure CNF). This was an introduction to complexity theory.
-
-**Focus:** Complexity / Computability / Algorithms
-
 [View on GitHub](https://github.com/EliotDe/sat-solver)
 
 ---
 
 ### MRI Brain Tumour Detection
-**Short Description:** Used transfer learning to detect brain tumours in MRI scans. Used three models: VGG16, EfficientNetB0, and a custom classifier.
-
-**Focus:** Transfer Learning / CNNs
-
 [View on GitHub](https://github.com/EliotDe/BrainTumourAI)
 
 ---

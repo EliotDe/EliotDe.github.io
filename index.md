@@ -10,8 +10,8 @@ Ultimately, I am eager to apply myself, and the skills and principles I have lea
 
 ## Projects
 
-### Privacy Preserving FL for IoT Network Intrusion Detection (ongoing)
-**Short Description:** This is my final year dissertation. The aim is to build a model and privacy-preserving framework that addresses the performance tradeoff in secure FL systems -- with a particular application to intrusion detection.
+### Privacy-Preserving FL-based for IoT NIDS (ongoing)
+**Short Description:** This is my final year dissertation. The aim is to build a model and privacy-preserving framework that addresses the performance tradeoff in secure FL systems -- with a particular application to intrusion detection in IoT networks.
 
 **Focus:** Federated Learning / Differential Privacy / Intrusion Detection.
 

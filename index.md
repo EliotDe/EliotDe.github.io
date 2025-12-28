@@ -15,6 +15,8 @@ Ultimately, I am eager to apply myself, and the skills and principles I have lea
 
 **Focus:** Federated Learning / Differential Privacy / Intrusion Detection.
 
+[Learn More](dissertation)
+
 ---
 
 ### CrisisSense: A Baremetal Environmental Sensor (ongoing)

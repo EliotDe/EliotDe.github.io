@@ -21,9 +21,10 @@ Ultimately, I am eager to apply myself, and the skills and principles I have lea
 **Short Description:** Exploring embedded systems by designing and building a prototype for a low-power IoT sensor. This project aims to use a low-power stm32, a bme280 sensor and a LoRa module to periodically transmit environmental data. Eventually I would like to expand to LoRaWAN.
 
 **Focus:** Internal Communication Protocols, Embedded-C, LoRa.
+
 [View on GitHub](https://github.com/EliotDe/CrisisSense)
 
----
+
 
 ## Misc:
 

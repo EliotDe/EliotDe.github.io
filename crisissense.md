@@ -110,6 +110,13 @@ The BME280 calls read/write wrappers in the sensor manager, which have the expec
   <em>Figure 3: Pinout configuration for the sensor.</em>
 </p>
 
+## Challenges
+
+The most significant challange I faced was my complete lack of soldering experience. My first attempt was, I imagine, as bad as it gets. My first attempt at desoldering did not go much better:
+
+
+
+
 
 
 

@@ -35,7 +35,8 @@ I have divided my project into drivers, managers (which act as my own HAL) and a
      class="center-image"
      width="300"
      alt="Firmware Architecture">
-
+     
+<em>Figure 3: Firmware architecture for the embedded system.</em>
 
 
 ## Debugging Manager
@@ -56,24 +57,26 @@ The BME280 calls read/write wrappers in the sensor manager, which have the expec
      class="center-image"
      width="400"
      alt="Sensor Read">
+
+<em>Figure 3: Sensor-read illustration.</em>
       
 ## Pinout
 
-SPI1_MOSI -> PA7
-
-SPI1_MISO -> PA6
-
-SPI1_SCK  -> PA5
-
-SPI1_NSS  -> PA4
-
-USART2_TX -> PA2
+| Signal        | MCU Pin |
+|---------------|---------|
+| SPI1_MOSI     | PA7     |
+| SPI1_MISO     | PA6     |
+| SPI1_SCK      | PA5     |
+| SPI1_NSS      | PA4     |
+| USART2_TX     | PA2     |
 
 
 <img src="assets/images/pinout.png"
      class="center-image"
      width="300"
      alt="Pinout">
+
+<em>Figure 3: Pinout configuration for the sensor.</em>
 
 
 

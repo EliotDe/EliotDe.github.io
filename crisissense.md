@@ -31,12 +31,18 @@ Obviously that is bad practice in general but I'm the only one looking at the pr
 
 I have divided my project into drivers, managers (which act as my own HAL) and application code. I have tried to make everything as self-contained as possible, my drivers are completely self contained, managers interact with many drivers and the main application interacts with many managers. The only exception is the BME280 driver which uses pointers to SPI read and write functions. This modularity has made it easier for me to diagnose issues and refactor.
 
-<img src="assets/images/crisissense-architecture.png"
+<!-- <img src="assets/images/crisissense-architecture.png"
      class="center-image"
      width="300"
      alt="Firmware Architecture">
      
-<em>Figure 3: Firmware architecture for the embedded system.</em>
+<em>Figure 1: Firmware architecture for the embedded system.</em> -->
+
+<p style="text-align: center;">
+  <img src="assets/images/crisissense-architecture.png" width="300" class="center-image">
+  <br>
+  <em>Figure 1: Firmware architecture for the embedded system.</em>
+</p>
 
 
 ## Debugging Manager
@@ -53,12 +59,19 @@ Polling functions are used since the stm32 wakes up every five minutes and only 
 
 The BME280 calls read/write wrappers in the sensor manager, which have the expected function signatures, and the manager then calls the corresponding driver function. The BME280 driver and SPI driver never call one another.
 
-<img src="assets/images/sensor-read.png"
+<!-- <img src="assets/images/sensor-read.png"
      class="center-image"
      width="400"
      alt="Sensor Read">
 
-<em>Figure 3: Sensor-read illustration.</em>
+<em>Figure 2: Sensor-read illustration.</em> -->
+
+<p style="text-align: center;">
+  <img src="assets/images/sensor-read.png" width="400" class="center-image">
+  <br>
+  <em>Figure 2: Sensor-read illustration.</em>
+</p>
+
       
 ## Pinout
 
@@ -71,12 +84,18 @@ The BME280 calls read/write wrappers in the sensor manager, which have the expec
 | USART2_TX     | PA2     |
 
 
-<img src="assets/images/pinout.png"
+<!-- <img src="assets/images/pinout.png"
      class="center-image"
      width="300"
      alt="Pinout">
 
-<em>Figure 3: Pinout configuration for the sensor.</em>
+<em>Figure 3: Pinout configuration for the sensor.</em> -->
+
+<p style="text-align: center;">
+  <img src="assets/images/pinout.png" width="300" class="center-image">
+  <br>
+  <em>Figure 3: Pinout configuration for the sensor.</em>
+</p>
 
 
 

@@ -55,16 +55,36 @@ The sensor manager essentially configures the clocks and gpio pins for SPI trans
 
 The sensor manager initiates the BME280 and passes the bme280_dev struct; this struct contains pointers to the spi_read, spi_write and delay functions. 
 
+```
+struct bme280_dev
+{
+    ...
+
+    /*! Read function pointer */
+    bme280_read_fptr_t read;
+
+    /*! Write function pointer */
+    bme280_write_fptr_t write;
+
+    /*! Delay function pointer */
+    bme280_delay_us_fptr_t delay_us;
+
+    ...
+};
+```
+
+```
+typedef BME280_INTF_RET_TYPE (*bme280_read_fptr_t)(uint8_t reg_addr, uint8_t *reg_data, uint32_t len, void *intf_ptr);
+
+typedef BME280_INTF_RET_TYPE (*bme280_write_fptr_t)(uint8_t reg_addr, const uint8_t *reg_data, uint32_t len, void *intf_ptr);
+
+typedef void (*bme280_delay_us_fptr_t)(uint32_t period, void *intf_ptr);
+```
+
 Polling functions are used since the stm32 wakes up every five minutes and only makes short transfers to the bme280: usually one byte (two including the address) except for burst writes or reading sensor data (usually around 8 bytes). 
 
 The BME280 calls read/write wrappers in the sensor manager, which have the expected function signatures, and the manager then calls the corresponding driver function. The BME280 driver and SPI driver never call one another.
 
-<!-- <img src="assets/images/sensor-read.png"
-     class="center-image"
-     width="400"
-     alt="Sensor Read">
-
-<em>Figure 2: Sensor-read illustration.</em> -->
 
 <p style="text-align: center;">
   <img src="assets/images/sensor-read.png" width="400" class="center-image">
@@ -83,13 +103,6 @@ The BME280 calls read/write wrappers in the sensor manager, which have the expec
 | SPI1_NSS      | PA4     |
 | USART2_TX     | PA2     |
 
-
-<!-- <img src="assets/images/pinout.png"
-     class="center-image"
-     width="300"
-     alt="Pinout">
-
-<em>Figure 3: Pinout configuration for the sensor.</em> -->
 
 <p style="text-align: center;">
   <img src="assets/images/pinout.png" width="300" class="center-image">

@@ -31,7 +31,11 @@ Obviously that is bad practice in general but I'm the only one looking at the pr
 
 I have divided my project into drivers, managers (which act as my own HAL) and application code. I have tried to make everything as self-contained as possible, my drivers are completely self contained, managers interact with many drivers and the main application interacts with many managers. The only exception is the BME280 driver which uses pointers to SPI read and write functions. This modularity has made it easier for me to diagnose issues and refactor.
 
-<img src="assets/images/crisissense-architecture.png" alt="Firmware Architecture" width="300">
+<img src="assets/images/crisissense-architecture.png"
+     class="center-image"
+     width="300"
+     alt="Firmware Architecture">
+
 
 
 ## Debugging Manager
@@ -48,9 +52,11 @@ Polling functions are used since the stm32 wakes up every five minutes and only 
 
 The BME280 calls read/write wrappers in the sensor manager, which have the expected function signatures, and the manager then calls the corresponding driver function. The BME280 driver and SPI driver never call one another.
 
-<img src="assets/images/sensor-read.png" alt="Sensor Read" width="400">
-
-
+<img src="assets/images/sensor-read.png"
+     class="center-image"
+     width="400"
+     alt="Sensor Read">
+      
 ## Pinout
 
 SPI1_MOSI -> PA7
@@ -64,7 +70,10 @@ SPI1_NSS  -> PA4
 USART2_TX -> PA2
 
 
-<img src="assets/images/pinout.png" alt="Pinout" width="300">
+<img src="assets/images/pinout.png"
+     class="center-image"
+     width="300"
+     alt="Pinout">
 
 
 

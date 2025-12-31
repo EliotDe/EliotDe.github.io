@@ -31,19 +31,25 @@ Obviously that is bad practice in general but I'm the only one looking at the pr
 
 I have divided my project into drivers, managers (which act as my own HAL) and application code. I have tried to make everything as self-contained as possible, my drivers are completely self contained, managers interact with many drivers and the main application interacts with many managers. The only exception is the BME280 driver which uses pointers to SPI read and write functions. This modularity has made it easier for me to diagnose issues and refactor.
 
+<img src="assets/images/crisissense-architecture.png" alt="Firmware Architecture" width="500">
+
+
 ## Debugging Manager
 
 The debugging manager is simple. It configures the relevant GPIO pins and passes a buffer to the USART driver to write. My board has a bridge between USART pins and the ST-Link for easy debugging, but it also works with a UART-USB adapter.
 
 ## Sensor Manager
 
-The sensor manager essentially configures the clocks and gpio pins for SPI transfers and the BME280 and SPI drivers. The read process is illustrated below. It is not completely accurate -- there are intermediate steps -- but it does capture the process in general. 
+The sensor manager essentially configures the clocks and gpio pins for SPI transfers and the BME280 and SPI drivers. The read process is illustrated below (write is similar). It is not completely accurate -- there are intermediate steps -- but it does capture the process in general. 
 
 The sensor manager initiates the BME280 and passes the bme280_dev struct; this struct contains pointers to the spi_read, spi_write and delay functions. 
 
 Polling functions are used since the stm32 wakes up every five minutes and only makes short transfers to the bme280: usually one byte (two including the address) except for burst writes or reading sensor data (usually around 8 bytes). 
 
 The BME280 calls read/write wrappers in the sensor manager, which have the expected function signatures, and the manager then calls the corresponding driver function. The BME280 driver and SPI driver never call one another.
+
+<img src="assets/images/sensor-read.png" alt="Sensor Read" width="500">
+
 
 ## Pinout
 
@@ -56,6 +62,9 @@ SPI1_SCK  -> PA5
 SPI1_NSS  -> PA4
 
 USART2_TX -> PA2
+
+<img src="assets/images/pinout.png" alt="Pinout" width="500">
+
 
 
 

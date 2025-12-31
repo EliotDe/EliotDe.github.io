@@ -26,14 +26,12 @@ Ultimately, I am eager to apply myself, and the skills and principles I have lea
 
 [View on GitHub](https://github.com/EliotDe/CrisisSense)
 
+---
 
-
-## Misc:
+## Other Projects:
 
 ### SAT Solver
 [View on GitHub](https://github.com/EliotDe/sat-solver)
-
----
 
 ### MRI Brain Tumour Detection
 [View on GitHub](https://github.com/EliotDe/BrainTumourAI)

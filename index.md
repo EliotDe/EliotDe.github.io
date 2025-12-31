@@ -24,6 +24,7 @@ Ultimately, I am eager to apply myself, and the skills and principles I have lea
 
 **Focus:** Internal Communication Protocols, Embedded-C, LoRa.
 
+[Learn More](crisissense)
 [View on GitHub](https://github.com/EliotDe/CrisisSense)
 
 ---

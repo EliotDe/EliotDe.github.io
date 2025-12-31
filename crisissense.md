@@ -56,6 +56,8 @@ The sensor manager essentially configures the clocks and gpio pins for SPI trans
 The sensor manager initiates the BME280 and passes the bme280_dev struct; this struct contains pointers to the spi_read, spi_write and delay functions. 
 
 ```
+### THIS IS BOSCH's CODE - NOT MINE
+
 struct bme280_dev
 {
     ...
@@ -119,6 +121,12 @@ The most significant challange I faced was my complete lack of soldering experie
   <br>
   <em>Figure 4: Sensor after desoldering.</em>
 </p>
+
+I ended up using pliers to take the rubber protector off, heating up the solder on the pin that was sticking out and using pliers again to pull the pin out. Residiual solder in the connection prevented me from putting a spare pin in, so I used a copper wick to clean it out. That was risky, given the sensitive components on the sensor. I put the new pin in and resoldered. Which led to the other issues.
+
+
+
+
 
 
 

@@ -17,7 +17,7 @@ title: About my Embedded Project
 
 # About my Embedded Project
 
-The following is a ramble on this project (so far). I discuss my motivations, designs, the embarrassing mistakes I made and the lessons I've learned so far. This project is not yet complete. So far I have finished writing my serial debugging module and integrating the sensor.
+The following is a ramble on this project (so far). I discuss my motivations, designs, the embarrassing mistakes I made and the lessons I've learned so far. This project is not yet complete; as you may be able to tell from that brief demo. So far I have finished writing my serial debugging module and integrating the sensor.
 
 ## Motivation
 

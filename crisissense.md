@@ -5,7 +5,7 @@ title: About my Embedded Project
 
 # About my Embedded Project
 
-The following is a ramble on this project (so far). I discuss my motivations, designs, the embarrassing mistakes I made and the lessons I've learned so far. This project Is not yet complete. So far I have finished writing my serial debugging module and integrating the sensor.
+The following is a ramble on this project (so far). I discuss my motivations, designs, the embarrassing mistakes I made and the lessons I've learned so far. This project is not yet complete. So far I have finished writing my serial debugging module and integrating the sensor.
 
 ## Motivation
 
@@ -57,9 +57,9 @@ The sensor manager essentially configures the clocks and gpio pins for SPI trans
 
 The sensor manager initiates the BME280 and passes the bme280_dev struct; this struct contains pointers to the spi_read, spi_write and delay functions. 
 
-```
-### THIS IS BOSCH's CODE - NOT MINE
+**Note:** This is Bosch’s code, not mine.
 
+```
 struct bme280_dev
 {
     ...
@@ -124,7 +124,7 @@ The most significant challenge I faced was my complete lack of soldering experie
   <em>Figure 4: Sensor after desoldering.</em>
 </p>
 
-I ended up using pliers to take the rubber protector off, heating up the solder on the pin that was sticking out and using pliers again to pull the pin out. Residiual solder in the connection prevented me from putting a spare pin in, so I used a copper wick to clean it out. That was risky, given the sensitive components on the sensor. I put the new pin in and resoldered.
+I ended up using pliers to take the rubber protector off, heating up the solder on the pin that was sticking out and using pliers again to pull the pin out. Residual solder in the connection prevented me from putting a spare pin in, so I used a copper wick to clean it out. That was risky, given the sensitive components on the sensor. I put the new pin in and resoldered.
 
 Debugging the sensor manager and drivers was difficult. I decided to write the firmware before I had managed to resolder the sensor which meant I wasn't testing as I programmed. In hindsight I could've made some unit tests that simulated sensor reads since I ended up using polling functions and that would have helped identify a number of problems.
 
@@ -196,11 +196,11 @@ static int8_t user_spi_read_blocking(uint8_t reg_addr, uint8_t* reg_data, uint32
   ...
 ```
 
-My horrible solution to dealing with dummy bytes was to read the bytes into `reg_data` which pointed to the `uint8_t reg_data` variable in `set_osr_press_temp_settings` and use `mymemmove` to copy the actual data into the reg_data variable. But, that meant I was reading the dummy byte and the actual byte into reg_data which pointed to a single byte. So I did what I should've done in the first place and handled dummy bytes using a seperate variable in the spi driver.
+My horrible solution to dealing with dummy bytes was to read the bytes into `reg_data` which pointed to the `uint8_t reg_data` variable in `set_osr_press_temp_settings` and use `mymemmove` to copy the actual data into the reg_data variable. But, that meant I was reading the dummy byte _and_ the actual byte into reg_data which pointed to a single byte. So I did what I should've done in the first place and handled dummy bytes using a separate variable in the spi driver.
 
 ## Lessons Learned
 
-Test as you go. Its so much easier. Heat the soldering iron up enough and use lots of flux. Carefully read the datasheets and reference manuals for every device in the embeded system. Don't do things like write two bytes to a char.
+Test as you go. Its so much easier. Heat the soldering iron up enough and use lots of flux. Carefully read the datasheets and reference manuals for every device in the embedded system. Don't do things like write two bytes to a char.
 
 ## Moving Forward
 

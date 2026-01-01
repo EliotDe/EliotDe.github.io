@@ -3,6 +3,18 @@ layout: default
 title: About my Embedded Project
 ---
 
+
+<!-- YouTube demo -->
+<p style="text-align: center;">
+  <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/cobPTzIAj4k" 
+          title="Embedded Project Demo" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+  </iframe>
+</p>
+
 # About my Embedded Project
 
 The following is a ramble on this project (so far). I discuss my motivations, designs, the embarrassing mistakes I made and the lessons I've learned so far. This project is not yet complete. So far I have finished writing my serial debugging module and integrating the sensor.

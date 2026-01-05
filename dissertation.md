@@ -31,7 +31,12 @@ This dissertation gives me the oppurtunity to explore many interesting and relev
 
 ## Proposed Experiment
 
-
+<!-- <img src="assets/images/fl-framework.png"
+     class="center-image"
+     width="300"
+     alt="Privacy Preserving Framework/Experiment">
+     
+<em>Figure 1: Experiment for the privacy preserving framework.</em> -->
 
 ## Proposed Model
 

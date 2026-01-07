@@ -50,14 +50,14 @@ I'm currently working out how best to pre-process the data for a federated learn
 Here are two very understandable plots:
 
 <p style="text-align: center;">
-  <img src="assets/images/dos_flows.png" width="400" class="center-image">
+  <img src="assets/images/dos_flows.png" width="500" class="center-image">
   <br>
   <em>Figure 2: DoS as flows per minute.</em>
 </p>
 
 
 <p style="text-align: center;">
-  <img src="assets/images/dos_flows.png" width="400" class="center-image">
+  <img src="assets/images/dos_flows.png" width="500" class="center-image">
   <br>
   <em>Figure 3: Scanning as flows per minute.</em>
 </p>

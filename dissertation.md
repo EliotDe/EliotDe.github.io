@@ -37,9 +37,29 @@ This dissertation gives me the oppurtunity to explore many interesting and relev
   <em>Figure 1: Privacy Preserving Framework/Experiment.</em>
 </p>
 
-## Proposed Model
+Once the ToN_IoT dataset is processed and the model is designed, I will use the flower framework to simulate FL training across different levels of perturbation and use known attacks to measure how much information can be recovered. 
 
 ## The Theoretical Side
 
 ## Where I'm At
+
+I have written a literature review on the topic, and started familiarising myself with the flower framework through small experiments. I have explored the dataset I'm using (ToN_IoT) and done some dataviz and model design. I am currently preprocessing. 
+
+I'm currently working out how best to pre-process the data for a federated learning experiment and preserve temporal patterns.
+
+Here are two very understandable plots:
+
+<p style="text-align: center;">
+  <img src="assets/images/dos_flows.png" width="500" class="center-image">
+  <br>
+  <em>Figure 2: DoS as flows per minute.</em>
+</p>
+
+
+<p style="text-align: center;">
+  <img src="assets/images/dos_flows.png" width="500" class="center-image">
+  <br>
+  <em>Figure 3: Scanning as flows per minute.</em>
+</p>
+
 

@@ -43,4 +43,23 @@ Once the ToN_IoT dataset is processed and the model is designed, I will use the 
 
 ## Where I'm At
 
-I have written a literature review on the topic, and started familiarising myself with the flower framework through small experiments. I am have explored the dataset I'm using (ToN_IoT) and done some dataviz and model design. I am currently preprocessing. 
+I have written a literature review on the topic, and started familiarising myself with the flower framework through small experiments. I have explored the dataset I'm using (ToN_IoT) and done some dataviz and model design. I am currently preprocessing. 
+
+I'm currently working out how best to pre-process the data for a federated learning experiment and preserve temporal patterns.
+
+Here are two very understandable plots:
+
+<p style="text-align: center;">
+  <img src="assets/images/dos_flows.png" width="400" class="center-image">
+  <br>
+  <em>Figure 2: DoS as flows per minute.</em>
+</p>
+
+
+<p style="text-align: center;">
+  <img src="assets/images/dos_flows.png" width="400" class="center-image">
+  <br>
+  <em>Figure 3: Scanning as flows per minute.</em>
+</p>
+
+

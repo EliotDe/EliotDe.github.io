@@ -57,7 +57,7 @@ Here are two very understandable plots:
 
 
 <p style="text-align: center;">
-  <img src="assets/images/dos_flows.png" width="500" class="center-image">
+  <img src="assets/images/scanning_flows.png" width="500" class="center-image">
   <br>
   <em>Figure 3: Scanning as flows per minute.</em>
 </p>

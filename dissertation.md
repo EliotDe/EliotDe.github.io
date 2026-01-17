@@ -41,13 +41,19 @@ Once the ToN_IoT dataset is processed and the model is designed, I will use the 
 
 ## The Theoretical Side
 
+Exploring the tradeoffs between privacy and model performance. The epsilon-differential provides a metric of privacy and essentially bounds the accuracy of a model. It is also known to exacerbate bias. My dissertation will make attempts to minimise this by, for example, employing an aggregation scheme that better handles heterogeneous data. 
+
+Another challenging aspect is simulating heterogeneity between clients. Network traffic data is feature rich and diverse, with many categorical features (ip addresses, ports, connection state,...) and continuous features (duration, src_bytes,...). It can also be dominated by certain attacks: scanning and (d)dos attacks taking up millions of records. It is also time series data but, in my case, structured arround events (flows) so there isn't a consistent stream of data.
+
+Deep learning strategies for classifying attacks on networks often take this into account: using 1d-CNNs or RNNs to capture temporal dynamics but popular partitioners split the data randomly according to some distribution which risks losing those patterns for local training.
+
 ## Where I'm At
 
-I have written a literature review on the topic, and started familiarising myself with the flower framework through small experiments. I have explored the dataset I'm using (ToN_IoT) and done some dataviz and model design. I am currently preprocessing. 
+I have written a literature review on the topic, and started familiarising myself with the flower framework through small experiments. I have explored the dataset I'm using (ToN_IoT) and done some dataviz and model design. 
 
-I'm currently working out how best to pre-process the data for a federated learning experiment and preserve temporal patterns.
+I'm currently working out how best to pre-process and partition the data for a federated learning experiment while preserving temporal patterns. 
 
-Here are two very understandable plots:
+Here are some plots:
 
 <p style="text-align: center;">
   <img src="assets/images/dos_flows.png" width="500" class="center-image">
@@ -56,10 +62,6 @@ Here are two very understandable plots:
 </p>
 
 
-<p style="text-align: center;">
-  <img src="assets/images/scanning_flows.png" width="500" class="center-image">
-  <br>
-  <em>Figure 3: Scanning as flows per minute.</em>
-</p>
+
 
 

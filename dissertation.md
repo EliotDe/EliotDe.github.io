@@ -61,7 +61,17 @@ Here are some plots:
   <em>Figure 2: DoS as flows per minute.</em>
 </p>
 
+<p style="text-align: center;">
+  <img src="assets/images/scanning_dist_60s.png" width="500" class="center-image">
+  <br>
+  <em>Figure 2: Distribution of dst_ports during 60s of a scanning attack.</em>
+</p>
 
+<p style="text-align: center;">
+  <img src="assets/images/normal_dist_60s.png" width="500" class="center-image">
+  <br>
+  <em>Figure 2: Distribution of dst_ports during 60s of normal traffic.</em>
+</p>
 
 
 
